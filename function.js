@@ -98,7 +98,7 @@ printAgain();
 const sumAgain = sum;
 console.log(sumAgain(1,3))
 
-// 8. Callback function using fuction expression
+// 9. Callback function using fuction expression
 // 콜백함수 : 함수를 피라미터로 받아서 상황에 맞게 사용가능하다 
 function randomQuiz(answer, printYes, printNo){
     if(answer === 'love you'){
