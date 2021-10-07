@@ -84,7 +84,7 @@ class Article{
 const article1 = new Article(1);
 Article.printPublisher();
 // -----------------------------------------------------------
-// 5. Inheritance 상속
+// 5. Inheritance : 상속
 // extends 키워드 사용
 // 코드 재사용
 class Shape{
