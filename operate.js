@@ -4,7 +4,7 @@ console.log(`string Iiterals:
 ''''
 1+2 = ${1+2}`);
 console.log("'ellie's \n\tbook");
-
+  
 //2 Numeric operators
 // 사칙연산
 
@@ -116,4 +116,4 @@ for (let i = 0; i < 10; i++) {
         continue;
     }
     console.log(i)
-}
+} 
