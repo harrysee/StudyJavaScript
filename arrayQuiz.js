@@ -21,6 +21,8 @@
 // Q4. make new array without the first two elements
 {
   const array = [1, 2, 3, 4, 5];
+  const result = array.slice(2);
+  console.log(result);
 }
 
 class Student {
