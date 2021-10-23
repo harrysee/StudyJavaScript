@@ -9,13 +9,15 @@
 // 1. Producer(기능수행데이터전달콜백함수, 문제생기면반환)
 // 사용자가 요구하지도 않았는데 Promise 만들어지자마자 콜백함수 실행시키기 때문에
 // 이점 주의해서 개발하기
+// resolve : 값 전달
+// reject : 에러 전달
 const promise = new Promise((resolve, reject) => {
     // doing some heavy work (network, read files)
     console.log(`doing something...`);
     // 딜레이주기 : 원하는 콜백함수 지정시간만큼 딜레이 후 실행 (1000==1초)
     setTimeout(() => {
-        // resolve : 성공적으로 받아온, 읽어온 가공한 데이터
-        //resolve('ellie');
+        // resolve : 성공적으로 받아온, 읽어온 가공한 데이터 반환
+        // resolve('ellie');
         reject(new Error('no network')); // 에러를 전달함 : 구체적인 에러메세지
     }, 2000);
 });
