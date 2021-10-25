@@ -44,7 +44,7 @@ body {
     padding: 7px;
     border-radius: 10%;
     position: relative;
-    bottom: 10px;
+    bottom: 11px;
 }
 .blue{
     background: var(--color-blue);
