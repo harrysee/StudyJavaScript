@@ -11,15 +11,15 @@
 
 <body>
     <!-- LOGO -->
-    <img class="logo" src="imgs/logo.png" onclick="reset()">
+    <img class="logo" src="imgs/logo.png" >
     <!-- Buttons -->
     <div class="btns">
-        <button class="btn"><img src="imgs/blue_t.png" alt="티셔츠" onclick="shapeView('t')" class="imgbtn"></button>
-        <button class="btn"><img src="imgs/blue_p.png" alt="바지" onclick="shapeView('p')" class="imgbtn"></button>
-        <button class="btn"><img src="imgs/blue_s.png" alt="스커트" onclick="shapeView('s')" class="imgbtn"></button>
-        <button class="btn ColorBtn blue" onclick="colorView('blue')">Blue</button>
-        <button class="btn ColorBtn pink" onclick="colorView('pink')">Pink</button>
-        <button class="btn ColorBtn yellow" onclick="colorView('yellow')">Yellow</button>
+        <button class="btn"><img src="imgs/blue_t.png" alt="티셔츠"  class="imgbtn" data-key="type" data-value="tshirt"></button>
+        <button class="btn"><img src="imgs/blue_p.png" alt="바지" class="imgbtn" data-key="type" data-value="pants"></button>
+        <button class="btn"><img src="imgs/blue_s.png" alt="스커트" class="imgbtn" data-key="type" data-value="skirt"></button>
+        <button class="btn ColorBtn blue"   data-key="color" data-value="blue">Blue</button>
+        <button class="btn ColorBtn pink"   data-key="color" data-value="pink">Pink</button>
+        <button class="btn ColorBtn yellow" data-key="color" data-value="yellow">Yellow</button>
     </div>
 
     <!-- items -->
@@ -34,6 +34,6 @@
         </li>
     </ul>
     
-    <script src="toyProject1.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>
