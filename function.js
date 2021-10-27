@@ -62,7 +62,7 @@ function printMessage(){
 //6. Return a value
 // 기본적으로 모든 함수에는 리턴하지않는 return undefine이 적용되어있다
 //하지만 리턴가능 ㅋ
-functionsum(a+b){
+function sum(a, b) {
     return a+b;
 }
 const result = sum(1,2);

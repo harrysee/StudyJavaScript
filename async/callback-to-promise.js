@@ -39,9 +39,20 @@ class UserStorage {
 const userStorage = new UserStorage();
 const id = prompt('enter your id'); // 사용자 입력받는 함수
 const password = prompt('enter your password'); // 사용자 입력받는 함수
+login();
 // 에러가 나면 바로 맨 밑의 catch로 넘어감
-userStorage
-    .loginUser(id, password)
-    .then(userStorage.getRoles)
-    .then(user => alert(`Hello ${user.name}, you have a ${user.role} role`))
-    .catch(console.log);
+// userStorage
+//     .loginUser(id, password)
+//     .then(userStorage.getRoles)
+//     .then(user => alert(`Hello ${user.name}, you have a ${user.role} role`))
+//     .catch(console.log);
+
+// await으로 바꿔보기
+async function login(){
+    try{
+        const user = await userStorage.getRoles(await userStorage.loginUser(id,password));
+        return alert(`Hello ${user.name}, you have a ${user.role} role`);
+    }catch(error){
+        console.log(error);
+    } 
+}
