@@ -8,7 +8,7 @@ function loadItems() {
 
 function displayItems(items){
     const container = document.querySelector('.items');
-    // 배열 한개한개
+    // 배열 한개한개 
     container.innerHTML = items.map(item => createHTMLString(item)).join('');
     // innerHTML : 문자열로 적힌 태그들을 html 위치에 삽입시킨다
 }
