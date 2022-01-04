@@ -97,3 +97,56 @@ const obj = {
 }
 obj.test1(); // object 자체를 가리킴
 obj.test2(); // window를 가리킴
+
+
+// 삼항연산자 
+const num = 10;
+
+num>10? console.log("true") : console.log("false");
+
+//forEach, map, filter, reduce
+const coronaCases = [
+    {city: 'Seoul', case:500},
+    {city: 'Busan', case:1000},
+    {city: 'Daegu', case:500},
+    {city: 'Daejeon', case:1200}
+]
+
+coronaCases.forEach(function(corona){
+    console.log(corona.city)
+})
+// 인덱스랑 같이 받기
+coronaCases.forEach((co,i)=>{
+    console.log(i, co)
+})
+
+// map 
+const coronaCities = coronaCases.map((corona)=>{
+    return corona.city
+})
+
+// coronaCities = coronaCases.map((corona)=> { return `${corona.case}명`})
+
+// filter
+// 해당 조건 만족하는 것만 뽑아내기
+const dangerousCity = coronaCases.filter(function(corona, i){
+    return corona.case > 300
+})
+
+// reduce : 누적하기
+const numbers = [10,123,22,33,44,55]
+const totalNumber = numbers.reduce((acc, cur)=>{
+    console.log(acc, cur)
+    return acc + cur
+},0)
+
+const ex = coronaCases.reduce((acc, cur)=>  // acc 배열 전체가 담김
+{
+    if(acc.case>=1000){
+        return acc + cur.case
+    }else{
+        return acc-cur.case
+    }
+},0)    // 값 초기화
+
+console.log(ex)
