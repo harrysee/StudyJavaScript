@@ -71,3 +71,29 @@ console.log(monkeyJson)
 // json -> object
 const parsedJson = JSON.parse(monkeyJson)
 console.log(parsedJson.name)
+
+// function
+// => 화살표함수와 일반함수 차이점
+// function함수는 선언하기전에 호출해도 ㄱㄴ
+// 화살표 함수는 함수로 등록되지않아서 선언하기 전에 호출하면 에러남
+function showPrice1(price){
+    console.log(price+loiyalty);
+}
+
+const showPrice2r = (price)=>{
+    console.log(price+ loiyalty)
+}
+
+// 오브젝트안에 함수 넣을때
+// 함수안에서의 this가 다르다
+const obj = {
+    name:"test",
+    test1: function(){
+        console.log(this)
+    },
+    test2: ()=>{
+        console.log(this)
+    }
+}
+obj.test1(); // object 자체를 가리킴
+obj.test2(); // window를 가리킴
