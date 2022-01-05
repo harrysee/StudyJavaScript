@@ -204,8 +204,8 @@ title.style.backgroundColor = "green" // _로 구분되는 속성은 카멜로 �
 console.log({title})
 
 // list.remove()
-list.firstElementChild.remove() // 첫번째 엘리먼트 삭제함
-list.lastElementChild.innerHTML = "<a>link</a>"
+// list.firstElementChild.remove() // 첫번째 엘리먼트 삭제함
+// list.lastElementChild.innerHTML = "<a>link</a>"
 
 console.log(title, list, items)
 
@@ -214,8 +214,15 @@ btn.addEventListener("click", function(){
     alert("탕수육")
 });
 
-link.addEventListener("click", (e)=>{
+title.addEventListener("click", (e)=>{
     e.preventDefault(); // 해당 이벤트 링크이동 안함
     console.log(e);
     alert("네이버!!!");
 })
+
+// HTTP 통신
+// 보내는 형식 : get / post
+// fetch() 사용\
+// http request
+const url = "https://api.covid19api.com/country/south-korea"
+const corona = fetch(url).then((res)=>res.json ).then(data => console.log(data))
