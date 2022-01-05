@@ -150,3 +150,39 @@ const ex = coronaCases.reduce((acc, cur)=>  // acc 배열 전체가 담김
 },0)    // 값 초기화
 
 console.log(ex)
+
+
+// OOP 객체지향
+// 툴을 그대로 사용
+function Song(singer, title, release){
+    this.singer = singer;
+    this.title = title;
+    this.release = release;
+    
+
+    console.log(this);
+}
+// 함수 밖에서 프로토타입으로 추가하기
+Song.prototype.getInfo = function(){
+    return `이 노래는 ${this.singer}이 불럿당`
+}
+
+const song1 = Song()        // 함수 Song을 출력
+const song2 = new Song("BTS","shong","2020-02-10")    // 객체 song2를 출력
+
+console.log(song2.release.getDay()) // 월화수목금토일 인덱스 반환 
+console.log(song2.getInfo())
+
+// Class 모양만 다를뿐 함수와 같은 기능
+class Song{
+    constructor(singer, title, release){    // 생성자
+        this.singer = singer;
+        this.title = title;
+        this.release = release;
+            
+    }
+    getInfo = function(){
+        return `이 노래는 ${this.singer}이 불럿당`
+    }
+    
+}
